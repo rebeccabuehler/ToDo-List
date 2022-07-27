@@ -14,7 +14,7 @@ function App() {
         }
     ]);
     const [value, setValue] = React.useState('');
-    const handelSubmit = e => {
+    const handleSubmit = e => {
         e.preventDefault();
         if(!value) return;
         const newToDos = [...todos, {text: value, isComplete: false}];
