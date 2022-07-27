@@ -13,7 +13,9 @@ function App() {
             isComplete: false,
         }
     ]);
-    return (<></>);
+    return (<>
+        {todos.map((todo, i) => <div key={i}>{todo.text}</div>)}
+    </>);
 }
 
 ReactDOM.render(
