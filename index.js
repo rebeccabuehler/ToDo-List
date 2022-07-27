@@ -20,9 +20,15 @@ function App() {
         const newToDos = [...todos, {text: value, isComplete: false}];
         setTodos(newToDos);
         setValue('');
+    };
+    const removeTodo = e => {
+        const index = Number(e.target.id);
+        let temp = [...todos];
+        temp.splice(index, 1);
+        setTodos(temp);
     }
     return (<>
-        {todos.map((todo, i) => <div key={i}>{todo.text}</div>)}
+        {todos.map((todo, i) => <div key={i} id={i} onClicke={removeTodo}>{todo.text}</div>)}
         <form onSubmit={handleSubmit}>
             <input
             type="text"
