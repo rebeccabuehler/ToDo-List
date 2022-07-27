@@ -28,7 +28,7 @@ function App() {
         setTodos(temp);
     }
     return (<>
-        {todos.map((todo, i) => <div key={i} id={i} onClicke={removeTodo}>{todo.text}</div>)}
+        {todos.map((todo, i) => <div key={i} id={i} onClick={removeTodo}>{todo.text}</div>)}
         <form onSubmit={handleSubmit}>
             <input
             type="text"
