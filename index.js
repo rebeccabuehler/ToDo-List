@@ -14,6 +14,13 @@ function App() {
         }
     ]);
     const [value, setValue] = React.useState('');
+    const handelSubmit = e => {
+        e.preventDefault();
+        if(!value) return;
+        const newToDos = [...todos, {text: value, isComplete: false}];
+        setTodos(newToDos);
+        setValue('');
+    }
     return (<>
         {todos.map((todo, i) => <div key={i}>{todo.text}</div>)}
         <form onSubmit={handleSubmit}>
