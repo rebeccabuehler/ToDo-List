@@ -14,11 +14,12 @@ function App() {
     },
   ]);
 
-  const addTodo = (text) => {
-    const newToDos = [...todos, { text: value, isComplete: false }];
+  const addTodo = text => {
+    const newToDos = [...todos, { text: text, isComplete: false }];
     setTodos(newToDos);
   };
-  const removeTodo = (e) => {
+
+  const removeTodo = e => {
     const index = Number(e.target.id);
     let temp = [...todos];
     temp.splice(index, 1);

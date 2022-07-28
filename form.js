@@ -1,12 +1,13 @@
-function ToDoForm(addToDo) {
+function ToDoForm({addTodo}) {
   const [value, setValue] = React.useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     if (!value) return;
     addTodo(value);
     setValue("");
   };
+  
   return (
     <form onSubmit={handleSubmit}>
       <input
