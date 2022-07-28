@@ -24,11 +24,11 @@ function App() {
     temp.splice(index, 1);
     setTodos(temp);
   };
-  
+
   return (
     <>
       {todos.map((todo, i) => (
-        <Todo index={i} todo={todo} remove={removeTodo} />
+        <Todo index={i} key={i} todo={todo} remove={removeTodo} />
       ))}
       <ToDoForm addTodo={addTodo} />
     </>
