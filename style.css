@@ -10,16 +10,18 @@ body {
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+      align-items: center;
   }
   
   .app {
     background: #209cee;
     padding: 30px;
     height: 100vh;
+    width: 100vh;
   }
   
   .todo-list{
-    background: #e8e8e8;
+    background: #209cee;
     border-radius: 4px;
     padding: 5px;
     max-width: 400px;
